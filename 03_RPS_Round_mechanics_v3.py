@@ -30,3 +30,10 @@ rounds = check_rounds()
 
 end_game = "no
 while end_game == "no":
+
+    # Start of game Play Loop
+
+    # Rounds Heading
+    print()
+    if rounds =="":
+        heading = "Continues Mode: \ Round {}".format
