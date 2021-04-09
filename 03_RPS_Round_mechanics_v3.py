@@ -1,4 +1,4 @@
-# Functions used to check input is valid
+# Main routine more efficient than v2
 
 
 def check_rounds():
@@ -22,10 +22,11 @@ def check_rounds():
 
 # Main Routine goes here...
 
+
 rounds_played = 0
 choose_instructions = "Please choose rock (r), paper (p), or scissors (s)"
 
-# ask user for number of round. <enter> for infinite mode
+# Ask user for number of round. <enter> for infinite mode
 rounds = check_rounds()
 
 
