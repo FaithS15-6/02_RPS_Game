@@ -22,18 +22,30 @@ def check_rounds():
 
 # Main Routine goes here...
 
-round_played = 0
+rounds_played = 0
 choose_instructions = "Please choose rock (r), paper (p), or scissors (s)"
 
 # ask user for number of round. <enter> for infinite mode
 rounds = check_rounds()
 
-end_game = "no
+
+end_game = "no"
 while end_game == "no":
 
     # Start of game Play Loop
 
     # Rounds Heading
     print()
-    if rounds =="":
-        heading = "Continues Mode: \ Round {}".format
+    if rounds == "":
+        heading = "Continues Mode: \ Round {}".format(rounds_played + 1)
+
+    else:
+        heading = "Round {} of \ Round {}".format(rounds_played + 1, rounds)
+
+    print(heading)
+    choose = input("{} or 'xxx' to end: ".format(choose_instructions))
+
+    # End game if exit code is typed
+    if choose == "xxx":
+        break
+        

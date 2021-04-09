@@ -22,7 +22,7 @@ def check_rounds():
 
 # Main Routine goes here...
 
-round_played = 0
+rounds_played = 0
 choose_instructions = "Please choose rock (r), paper (p), or scissors (s)"
 
 # ask user for number of round. <enter> for infinite mode
@@ -41,7 +41,7 @@ while end_game == "no":
             break
 
     else:
-        heading = "Round {} of {}".format(round_played + 1, rounds)
+        heading = "Round {} of {}".format(rounds_played + 1, rounds)
         print(heading)
         choose = input(choose_instructions)
         if rounds_played == rounds - 1:
@@ -51,7 +51,7 @@ while end_game == "no":
     # rest of loop / game
     print("You chose {}".format (choose))
 
-    round_played += 1
+    rounds_played += 1
 
 print("Thank you for playing😊")
 
