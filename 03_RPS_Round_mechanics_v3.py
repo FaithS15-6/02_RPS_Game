@@ -48,4 +48,3 @@ while end_game == "no":
     # End game if exit code is typed
     if choose == "xxx":
         break
-        
