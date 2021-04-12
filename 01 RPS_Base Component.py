@@ -68,10 +68,12 @@ while end_game == "no":
     if choose == "xxx":
         break
 
-
     # Ask user choice and check it's valid
     choose = choice_checker("choose rock / paper / scossors"
-                            "(r/p/s:", rps_list)
+                                "(r/p/s): ", rps_list
+                                "Please choose from rock /"
+                                "Paper / scissors "
+                                "(or xxx to quit). ")
 # Ask user if they want to see their game history.
 # if 'yes' show game history
 
