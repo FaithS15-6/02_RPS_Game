@@ -82,9 +82,24 @@ while end_game == "no":
     choose = choice_checker("choose rock / paper / scissors (r/p/s): ", rps_list, "Please choose from rock, Paper / scissors (or xxx to quit).")
     print("you choose", choose)   
 
+    # Ask user for choice and checkk its valid
+    choose = choice_checker(choose_instructions, rps_list, choose_error)
+
+    # get computer choice 
+    comp_choice = random.choice(rps_list[:-1])
+    print ("Comp Choice: ", comp_choice)
+      
+
+      # compare choices 
+
     # End game if exit code is typed
     if choose == "xxx":
         break
+
+    # *** rest of loop / game ***
+    print("You chose {}". format (choose))
+
+    rounds_played += 1
 
 # Ask user if they want to see their game history.
 # if 'yes' show game history
