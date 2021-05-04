@@ -1,4 +1,4 @@
-# Main routine more efficient than v2
+# MAin routine more efficient than v2
 
 
 def check_rounds():
@@ -20,8 +20,7 @@ def check_rounds():
 
         return response
 
-# Main Routine goes here...
-
+# <Ain routine goees here...
 
 rounds_played = 0
 choose_instructions = "Please choose rock (r), paper (p), or scissors (s)"

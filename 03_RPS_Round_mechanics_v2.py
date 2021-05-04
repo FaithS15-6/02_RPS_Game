@@ -23,7 +23,6 @@ def check_rounds():
 
 # Main Routine goes here...
 
-
 rounds_played = 0
 choose_instructions = "Please choose rock (r), paper (p), or scissors (s)"
 

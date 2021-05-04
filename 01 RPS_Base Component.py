@@ -66,6 +66,8 @@ rounds = check_rounds()
 
 
 end_game = "no"
+
+# loops while rounds played is less than rounds requested
 while end_game == "no":
 
     # Start of game Play Loop
@@ -74,16 +76,15 @@ while end_game == "no":
     print()
     if rounds == "":
         heading = "Continues Mode: Round {}".format(rounds_played + 1)
-
+  
     else:
         heading = "Round {} of Round {}".format(rounds_played + 1, rounds)
 
     print(heading)
+
     choose = choice_checker("choose rock / paper / scissors (r/p/s): ", rps_list, "Please choose from rock, Paper / scissors (or xxx to quit).")
     print("you choose", choose)   
 
-    # Ask user for choice and checkk its valid
-    choose = choice_checker(choose_instructions, rps_list, choose_error)
 
     # get computer choice 
     comp_choice = random.choice(rps_list[:-1])
@@ -94,6 +95,11 @@ while end_game == "no":
 
     # End game if exit code is typed
     if choose == "xxx":
+        break
+
+        # End game if round entered is finished
+
+    if rounds!= "" and rounds_played >= rounds - 1:
         break
 
     # *** rest of loop / game ***
