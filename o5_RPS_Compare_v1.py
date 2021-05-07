@@ -3,6 +3,7 @@ rps_list = ["rock  ", "paper", "scissors"]
 comp_index = 0
 for item in rps_list:
     user_index = 0
+    
     for item in rps_list:
         user_choice = rps_list[user_index]
         comp_choice = rps_list[comp_index]
@@ -11,17 +12,31 @@ for item in rps_list:
 
         result = ""
 
-        # compare options
-
+        # Compare options between computer choice and User choice 
+        # Detemine wins and loses
+        
         if comp_choice == user_choice:
             result = "tie"
         elif comp_choice == "rock" and user_choice == "paper":
             result = "Win"
-        if comp_choice == "paper" and user_choice == "rock":
-            result = "loose"
+        
+        if comp_choice == "scissors" and user_choice == "paper":
+            result = "Loose"
+        elif comp_choice == "paper" and user_choice == "scissors":
+            result = "Win"
 
+        if comp_choice == "paper" and user_choice == "rock":
+            result = "Loose"
+        elif comp_choice == "rock" and user_choice == "paper": 
+            result = "Win"
+
+        if  comp_choice == "scissors" and user_choice == "paper":
+            result = "Loose"
+        elif comp_choice == "paper" and user_choice == "scissors":
+            result = "Win"
+               
         print("User: {} vs Computer: {} - {}".format(user_choice, comp_choice, result))
 
-        comp_index += 1
+    comp_index += 1
 
     
