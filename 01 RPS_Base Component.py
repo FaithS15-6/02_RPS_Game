@@ -7,7 +7,7 @@ def check_rounds():
         response = input("How many rounds: ")
 
         round_error = "Please type either <enter> or an " \
-                      "integer that is morethan 0\n"
+                      "integer that is more than 0\n"
 
         # If infinite mode not chosen, check response
         # Is an interger that is more than 0
@@ -26,6 +26,7 @@ def check_rounds():
                 continue
 
         return response
+
 
 
 # Functions go here
@@ -82,22 +83,44 @@ while end_game == "no":
 
     print(heading)
 
-    choose = choice_checker("choose rock / paper / scissors (r/p/s): ", rps_list, "Please choose from rock, Paper / scissors (or xxx to quit).")
-    print("you choose", choose)   
-
-
     # get computer choice 
     comp_choice = random.choice(rps_list[:-1])
     print ("Comp Choice: ", comp_choice)
-      
 
-      # compare choices 
+    choose = choice_checker("choose rock / paper / scissors (r/p/s): ", rps_list, "Please choose from rock, Paper / scissors (or xxx to quit).")
+    print("you choose", choose)   
+     
 
     # End game if exit code is typed
     if choose == "xxx":
         break
 
         # End game if round entered is finished
+
+    # compare choices 
+    # Compare options between computer choice and User choice 
+    # Detemine wins and loses
+    # if Choices are the same, it is a tie.
+
+    if comp_choice == choose:
+        result = "tie"
+        # three ways to win...
+    elif comp_choice == "rock" and choose == "paper":
+        result = "win"
+    elif comp_choice == "scissors" and choose == "rock":
+        result = "win"
+    elif comp_choice == "paper" and choose == "scissors":
+        result = "win"
+
+    # if you don't tie / win, you lose
+    else:
+        result = "lose"
+        
+    print("User: {} vs Computer: {} - {}".format(choose, comp_choice, result))
+    print()
+
+
+
 
     if rounds!= "" and rounds_played >= rounds - 1:
         break
@@ -111,3 +134,8 @@ while end_game == "no":
 # if 'yes' show game history
 
 # Show statistics
+
+# end game
+print()
+print("Thanks for playing")
+print()

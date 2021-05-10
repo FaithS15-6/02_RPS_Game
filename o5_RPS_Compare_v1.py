@@ -20,21 +20,25 @@ for item in rps_list:
         elif comp_choice == "rock" and user_choice == "paper":
             result = "Win"
         
-        if comp_choice == "scissors" and user_choice == "paper":
+        elif comp_choice == "scissors" and user_choice == "paper":
             result = "Loose"
         elif comp_choice == "paper" and user_choice == "scissors":
             result = "Win"
 
-        if comp_choice == "paper" and user_choice == "rock":
+        elif comp_choice == "paper" and user_choice == "rock":
             result = "Loose"
         elif comp_choice == "rock" and user_choice == "paper": 
             result = "Win"
 
-        if  comp_choice == "scissors" and user_choice == "paper":
+        elif  comp_choice == "scissors" and user_choice == "paper":
             result = "Loose"
         elif comp_choice == "paper" and user_choice == "scissors":
             result = "Win"
-               
+
+        elif comp_choice == "scissors" and comp_choice == "rock":
+             result = "Win"
+        elif comp_choice == "rock" and user_choice == "scissors":
+            result = "Loose"
         print("User: {} vs Computer: {} - {}".format(user_choice, comp_choice, result))
 
     comp_index += 1
