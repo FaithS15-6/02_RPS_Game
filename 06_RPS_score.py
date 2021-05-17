@@ -14,14 +14,20 @@ for item in test_results:
 
     # Generate computer choice
 
-    result = item
-
-    if result == "tie":
-        result = " It's a tie🤞"
+    
+    if item == "tie":
+        result = " It's a tie"
         rounds_drawn += 1
-    elif result == "loss":
+    elif item == "loss":
+        result ="You lose"
         rounds_lost += 1
+    else:
+        result = "You win"
 
+    print(result)
+
+
+print()
 # Quick Calculations (stats)
 rounds_won = rounds_played - rounds_lost - rounds_drawn
 
@@ -30,4 +36,4 @@ print()
 print('****End Game Summary ****')
 print("Won: {} \t|\t Lost: {} \t|\t Draw: {}".format(rounds_won, rounds_lost, rounds_drawn))
 print()
-print("Thanks for playing😊")
+print("Thanks for playing ")
