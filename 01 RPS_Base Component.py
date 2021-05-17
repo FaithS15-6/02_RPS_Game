@@ -60,6 +60,10 @@ rps_list = ["rock", "paper", "scissors", "xxx"]
 
 # ask user for # of rounds then loop...
 rounds_played = 0
+rounds_lost = 0
+rounds_won = 0
+rounds_drawn = 0
+
 chose_instructions = "Please chose rock (r), paper (p), or scissors (s)"
 
 # Ask user for number of round. <enter> for infinite mode
@@ -104,6 +108,7 @@ while end_game == "no":
 
     if comp_choice == chose:
         result = "tie"
+        rounds_drawn += 1
         # three ways to win...
     elif comp_choice == "rock" and chose == "paper":
         result = "win"
@@ -138,7 +143,6 @@ while end_game == "no":
 rounds_won = rounds_played - rounds_lost - rounds_drawn
 
 # End of Game Statements
-
 print()
 print('****End Game Summary ****')
 print("Won: {} \t|\t Lost: {} \t|\t Draw: {}".format(rounds_won, rounds_lost, rounds_drawn))
