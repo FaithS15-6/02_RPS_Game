@@ -1,4 +1,4 @@
-# checks that users answer yes / no to a question
+# Function go here...
 def yes_no(question):
     valid = False
     while not valid:
@@ -16,11 +16,24 @@ def yes_no(question):
             print("Please answer yes / no")
 
 
-#  Shows instructions on how to play (returns "")
 def instructions():
     print("**** How to play ****")
-    print("The instructions to this game are very easy. ")
-  
-    print("GOOD LUCK! & *HAVE FUN*...")
+    print()
+    print("In this game, you can select among rock, paper or scissors inrder to beat the computer's random selections. it is just like playing rock, paper scissors, in real life but this time you're playing against a computer.")
+    print("To play with rock put 'r' or 'rock, scissors is 's' or 'scissors and paper is 'p' or 'paper'")
+    print()
+    print("****GAME RULES****")
+    print()
+    print("Rock beats scissors")
+    print("Scissors beats paper")
+    print("paper beats rock")
+
     return ""
- 
+
+# Main Routine goes here...
+played_before = yes_no("Have you played the game before? ")
+
+if played_before == "no":
+    instructions()
+
+print("program Continues")
