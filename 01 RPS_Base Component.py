@@ -46,16 +46,13 @@ def choice_checker (question, options, error):
 
         print(error)
 
-# Main routine goes here
-
 # List of valid responses
-
 
 yes_no_list = ["yes", "no"]
 rps_list = ["rock", "paper", "scissors", "xxx"]
 
 # Ask user if they have played before.
-# if 'no', show instructions
+# if 'no', it should show instructions
 def yes_no(question):
     valid = False
     while not valid:
@@ -74,9 +71,10 @@ def yes_no(question):
 
 
 def instructions():
+    print()
     print("**** How to play ****")
     print()
-    print("In this game, you can select among rock, paper or scissors inrder to beat the computer's random selections. it is just like playing rock, paper scissors, in real life but this time you're playing against a computer.")
+    print("In this game, you can select among rock, paper or scissors inrder to beat the computer's random selections. it is just like playing rock, paper scissors, in real life but this time you're playing against a computer.\n")
     print("To play with rock put 'r' or 'rock, scissors is 's' or 'scissors and paper is 'p' or 'paper'  or if you want to quit, you can type in 'xxx'.")
     print()
     print("****GAME RULES****")
@@ -96,7 +94,7 @@ if played_before == "no":
     instructions()
 
 
-# ask user for # of rounds then loop...
+# Ask user for number of rounds then loop...
 rounds_played = 0
 rounds_lost = 0
 rounds_won = 0
@@ -116,18 +114,19 @@ while end_game == "no":
 # loops while rounds played is less than rounds requested
 
     # Start of game Play Loop
+    rounds_played += 1
 
     # Rounds Heading
     print()
     if rounds == "":
-        heading = "Continues Mode: Round {}".format(rounds_played + 1)
+        heading = "Continues Mode: Round {}".format(rounds_played)
   
     else:
-        heading = "Round {} of Round {}".format(rounds_played + 1, rounds)
+        heading = "Round {} of Round {}".format(rounds_played, rounds)
 
     print(heading)
 
-    # get computer choice 
+  # Gets the computer shouce
     comp_choice = random.choice(rps_list[:-1])
     print ("Comp Choice: ", comp_choice)
 
@@ -166,7 +165,7 @@ while end_game == "no":
     print()
 
     # add to game history
-    outcome ="Round {}: {}".format(rounds_played +1, result)
+    outcome ="Round {}: {}".format(rounds_played, result)
 
     if result == "lost":
         rounds_lost += 1
@@ -183,7 +182,6 @@ while end_game == "no":
     # *** rest of loop / game ***
     print("You chose {}". format (chose))
 
-    rounds_played += 1
 
 # Ask user if they want to see their game history.
 # if 'yes' show game history
