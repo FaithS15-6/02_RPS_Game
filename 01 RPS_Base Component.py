@@ -77,7 +77,7 @@ def instructions():
     print("**** How to play ****")
     print()
     print("In this game, you can select among rock, paper or scissors inrder to beat the computer's random selections. it is just like playing rock, paper scissors, in real life but this time you're playing against a computer.")
-    print("To play with rock put 'r' or 'rock, scissors is 's' or 'scissors and paper is 'p' or 'paper'  or if you want to quit, you can type in 'xxx'")
+    print("To play with rock put 'r' or 'rock, scissors is 's' or 'scissors and paper is 'p' or 'paper'  or if you want to quit, you can type in 'xxx'.")
     print()
     print("****GAME RULES****")
     print()
